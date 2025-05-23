@@ -16,10 +16,26 @@
         padding: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         position: relative;
         text-align: center;
+      }
+
+      .header-box {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px 40px;
+        border: 2px solid #00ffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
+        max-width: 90%;
+      }
+
+      .header-box h1 {
+        font-size: 42px;
+        margin: 0;
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
       }
 
       .neon-box {
@@ -29,6 +45,7 @@
         border-radius: 12px;
         box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff inset;
         max-width: 90%;
+        margin-top: 30px;
       }
 
       .neon-box h1 {
@@ -98,6 +115,10 @@
     </style>
   </head>
   <body>
+    <div class="header-box">
+      <h1>Selamat Datang di Dunia Superrz</h1>
+    </div>
+
     <div class="social-icons">
       <a href="https://wa.me/yourphonenumber" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
