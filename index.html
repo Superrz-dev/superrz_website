@@ -12,7 +12,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 0 140px;
+      padding: 40px 0 100px;
       text-align: center;
     }
 
@@ -21,172 +21,35 @@
       padding: 15px 30px;
       margin-bottom: 40px;
       border: 2px solid #00ffff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
       display: inline-block;
     }
 
-    .header-box h1 {
-      font-size: 42px;
-      margin: 0;
-      color: #00ffff;
-      text-shadow: 0 0 10px #00ffff;
-      animation: kelip 1s infinite alternate;
-    }
-
-    @keyframes kelip {
-      from {
-        opacity: 1;
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-      }
-      to {
-        opacity: 0.4;
-        text-shadow: 0 0 5px #00ffff;
-      }
-    }
-
-    .neon-box {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 50px 70px;
-      border: 3px solid #00ffff;
-      border-radius: 12px;
-      box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff inset;
-      max-width: 90%;
-      margin: 40px auto;
-    }
-
-    .neon-box h1 {
-      font-size: 48px;
-      color: #00ffff;
-      text-shadow: 0 0 15px #00ffff;
-      margin: 0;
-    }
-
-    .neon-box p {
-      font-size: 20px;
-      text-shadow: 0 0 10px #00ffff;
-      margin: 10px 0;
-    }
-
-    .neon-box a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #ff00ff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      text-shadow: 0 0 10px #ff00ff;
-    }
-
-    .neon-box a:hover {
-      color: #ffff00;
-      text-shadow: 0 0 10px #ffff00;
-    }
-
-    .bottom-image-link {
-      position: fixed;
-      bottom: 135px; /* dinaikkan agar tidak terpotong */
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-    }
-
-    .bottom-image-link img {
-      width: 60px;
-      height: 60px;
+    .circle-image {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      box-shadow: 0 0 10px #00ffff;
-      transition: transform 0.2s ease;
-    }
-
-    .bottom-image-link img:hover {
-      transform: scale(1.1);
-    }
-
-    .social-icons {
-      position: fixed;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 20px;
-      z-index: 10;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 8px 16px;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-    }
-
-    .social-icons a img {
-      width: 50px;
-      height: 50px;
-      filter: drop-shadow(0 0 5px #00ffff);
-    }
-
-    .teks-bergerak {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
       overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 10px 0;
-    }
-
-    .teks-bergerak span {
       display: inline-block;
-      padding-left: 100%;
-      animation: jalan 20s linear infinite;
-      font-size: 26px;
-      color: #00ffea;
-      text-shadow: 0 0 10px #00ffea;
+      margin-top: -20px; /* agar gambar tidak terpotong */
     }
 
-    @keyframes jalan {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+    .circle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header Neon -->
   <div class="header-box">
-    <h1>COMING SOON!</h1>
+    <h1>Selamat Datang di Superrz</h1>
+    <p>Klik gambar untuk menuju ke situs OKX</p>
   </div>
 
-  <!-- Neon Box -->
-  <div class="neon-box">
-    <h1>Ob-La-Di, Ob-La-Da!</h1>
-    <p>Scramouche.</p>
-    <p>Focus On Target And Never Give Up!</p>
-    <a href="https://google.com" target="_blank">Klik di sini untuk ke Google</a>
-  </div>
-
-  <!-- Gambar Superrz Klikable -->
-  <a href="https://superrz-dev.github.io" class="bottom-image-link" target="_blank">
-    <img src="https://i.postimg.cc/gcHrQJrH/Superrz-cicaheum.jpg" alt="Superrz Logo" />
+  <a href="https://www.okx.com" target="_blank">
+    <div class="circle-image">
+      <img src="https://superrz.com/logo.png" alt="Superrz Logo">
+    </div>
   </a>
-
-  <!-- Ikon Sosial -->
-  <div class="social-icons">
-    <a href="https://wa.me/447578354815" target="https://okx.com/join/88312178">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
-    </a>
-    <a href="https://t.me/superrz10" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" />
-    </a>
-    <a href="https://x.com/yourusername" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" />
-    </a>
-  </div>
-
-  <!-- Teks Berjalan -->
-  <div class="teks-bergerak">
-    <span>Welcome to Website By Superrz!!</span>
-  </div>
-
 </body>
 </html>
