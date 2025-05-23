@@ -12,7 +12,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 0 100px;
+      padding: 40px 0 140px; /* memberi ruang di bawah agar tidak tertutup */
       text-align: center;
     }
 
@@ -84,14 +84,19 @@
     }
 
     .social-icons {
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 20px;
-  z-index: 10;
-}
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 8px 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
     .social-icons a img {
       width: 50px;
       height: 50px;
@@ -140,7 +145,7 @@
     <a href="https://google.com" target="_blank">Klik di sini untuk ke Google</a>
   </div>
 
-  <!-- Ikon sosial -->
+  <!-- Ikon sosial (fixed) -->
   <div class="social-icons">
     <a href="https://wa.me/447578354815" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
