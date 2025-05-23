@@ -12,25 +12,18 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 40px 0;
       text-align: center;
-      position: relative;
     }
 
     .header-box {
-      position: absolute;
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
       background: rgba(0, 0, 0, 0.6);
       padding: 15px 30px;
+      margin-bottom: 40px;
       border: 2px solid #00ffff;
       border-radius: 10px;
       box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
+      display: inline-block;
     }
 
     .header-box h1 {
@@ -59,6 +52,7 @@
       border-radius: 12px;
       box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff inset;
       max-width: 90%;
+      margin: 40px auto;
     }
 
     .neon-box h1 {
@@ -89,15 +83,27 @@
       text-shadow: 0 0 10px #ffff00;
     }
 
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .social-icons a img {
+      width: 50px;
+      height: 50px;
+      filter: drop-shadow(0 0 5px #00ffff);
+    }
+
     .teks-bergerak {
-      position: absolute;
-      bottom: 60px;
       width: 100%;
       overflow: hidden;
       white-space: nowrap;
       box-sizing: border-box;
       background: rgba(0, 0, 0, 0.7);
       padding: 10px 0;
+      margin-top: 30px;
     }
 
     .teks-bergerak span {
@@ -112,21 +118,6 @@
     @keyframes jalan {
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
-    }
-
-    .social-icons {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-icons a img {
-      width: 50px;
-      height: 50px;
-      filter: drop-shadow(0 0 5px #00ffff);
     }
   </style>
 </head>
@@ -145,22 +136,22 @@
     <a href="https://google.com" target="_blank">Klik di sini untuk ke Google</a>
   </div>
 
-  <!-- Text berjalan -->
-  <div class="teks-bergerak">
-    <span>Welcome to Website By Superrz!!</span>
-  </div>
-
   <!-- Ikon sosial -->
   <div class="social-icons">
     <a href="https://wa.me/447578354815" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
     </a>
-    <a href="https://t.me/@superrz10" target="_blank">
+    <a href="https://t.me/superrz10" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" />
     </a>
     <a href="https://x.com/yourusername" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" />
     </a>
+  </div>
+
+  <!-- Text berjalan -->
+  <div class="teks-bergerak">
+    <span>Welcome to Website By Superrz!!</span>
   </div>
 
 </body>
