@@ -84,12 +84,14 @@
     }
 
     .social-icons {
-      display: flex;
-      justify-content: bottom;
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
     .social-icons a img {
       width: 50px;
       height: 50px;
