@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Superrz Website</title>
   <style>
     body {
@@ -30,7 +30,12 @@
       border-radius: 50%;
       overflow: hidden;
       display: inline-block;
-      margin-top: -20px; /* agar gambar tidak terpotong */
+      margin-top: -20px;
+      transition: transform 0.3s ease;
+    }
+
+    .circle-image:hover {
+      transform: scale(1.05);
     }
 
     .circle-image img {
