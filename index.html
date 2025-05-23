@@ -12,7 +12,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 0 140px; /* memberi ruang di bawah agar tidak tertutup */
+      padding: 40px 0 140px;
       text-align: center;
     }
 
@@ -83,6 +83,26 @@
       text-shadow: 0 0 10px #ffff00;
     }
 
+    .bottom-image-link {
+      position: fixed;
+      bottom: 115px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .bottom-image-link img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00ffff;
+      transition: transform 0.2s ease;
+    }
+
+    .bottom-image-link img:hover {
+      transform: scale(1.1);
+    }
+
     .social-icons {
       position: fixed;
       bottom: 50px;
@@ -132,12 +152,12 @@
 </head>
 <body>
 
-  <!-- Header Neon COMING SOON! -->
+  <!-- Header Neon -->
   <div class="header-box">
     <h1>COMING SOON!</h1>
   </div>
 
-  <!-- Box Superrz -->
+  <!-- Neon Box -->
   <div class="neon-box">
     <h1>Superrz!</h1>
     <p>Scramouche.</p>
@@ -145,7 +165,12 @@
     <a href="https://google.com" target="_blank">Klik di sini untuk ke Google</a>
   </div>
 
-  <!-- Ikon sosial (fixed) -->
+  <!-- Gambar Klikable Superrz (di atas ikon sosial) -->
+  <a href="https://superrz-dev.github.io" class="bottom-image-link" target="_blank">
+    <img src="https://i.postimg.cc/gcHrQJrH/Superrz-cicaheum.jpg" alt="Superrz Logo" />
+  </a>
+
+  <!-- Ikon Sosial -->
   <div class="social-icons">
     <a href="https://wa.me/447578354815" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
@@ -158,7 +183,7 @@
     </a>
   </div>
 
-  <!-- Text berjalan -->
+  <!-- Teks Berjalan -->
   <div class="teks-bergerak">
     <span>Welcome to Website By Superrz!!</span>
   </div>
