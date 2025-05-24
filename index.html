@@ -12,7 +12,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 0 200px;
+      padding: 40px 0 240px;
       text-align: center;
     }
 
@@ -112,6 +112,28 @@
       padding: 10px;
     }
 
+    .ethnews-feed {
+      max-width: 95%;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .ethnews-feed ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ethnews-feed li a {
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 18px;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
     .bottom-image-link {
       position: fixed;
       bottom: 135px;
@@ -173,6 +195,17 @@
       text-shadow: 0 0 10px #00ffea;
     }
 
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #00ffff;
+      padding: 20px 0;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
     @keyframes jalan {
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
@@ -207,6 +240,30 @@
     </coingecko-coin-price-marquee-widget>
   </div>
   <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+
+  <!-- ETHNews Feed -->
+  <div class="ethnews-feed" id="ethnews-feed">
+    <h2>Latest from ETHNews</h2>
+    <ul id="ethnews-list"></ul>
+  </div>
+  <script>
+    fetch('https://feedity.net/rss/https--www-ethnews-com/VFJRVFRT.rss')
+      .then(response => response.text())
+      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      .then(data => {
+        const items = data.querySelectorAll("item");
+        const list = document.getElementById("ethnews-list");
+        items.forEach(el => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = el.querySelector("link").textContent;
+          a.textContent = el.querySelector("title").textContent;
+          a.target = "_blank";
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+      });
+  </script>
 
   <!-- OKX DEX Widget -->
   <div id="okx-dex-widget" class="okx-widget"></div>
@@ -249,6 +306,9 @@
   <div class="teks-bergerak">
     <span>Welcome to Website By Superrz!!          Maaf Sedang Dalam Tahap Pengembangan.</span>
   </div>
+
+  <!-- Footer Copyright -->
+  <div class="footer">&copy; 2024 Superrz. All rights reserved.</div>
 
 </body>
 </html>
