@@ -12,7 +12,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 0 180px;
+      padding: 40px 0 200px;
       text-align: center;
     }
 
@@ -90,6 +90,12 @@
       border-radius: 10px;
       box-shadow: 0 0 15px #00ffff;
       padding: 10px 0;
+    }
+
+    .okx-widget {
+      margin: 30px auto;
+      max-width: 600px;
+      padding: 10px;
     }
 
     .bottom-image-link {
@@ -174,7 +180,7 @@
     <a href="https://google.com" target="_blank">Klik di sini untuk ke Google</a>
   </div>
 
-  <!-- Widget CoinGecko -->
+  <!-- CoinGecko Widget -->
   <div class="coingecko-widget">
     <coingecko-coin-price-marquee-widget
       coin-ids="bitcoin,ethereum,solana,dogecoin"
@@ -184,6 +190,23 @@
     </coingecko-coin-price-marquee-widget>
   </div>
   <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+
+  <!-- OKX DEX Widget -->
+  <div id="okx-dex-widget" class="okx-widget"></div>
+  <script src="https://static.okx.com/cdn/widget/okx-widget.js"></script>
+  <script>
+    OKXWidget.init({
+      container: '#okx-dex-widget',
+      type: 'dex',
+      theme: 'dark',
+      lang: 'en',
+      width: '100%',
+      height: 520,
+      tokenIn: 'ETH',
+      tokenOut: 'USDT',
+      chainId: 1
+    });
+  </script>
 
   <!-- Gambar Superrz Klikable -->
   <a href="https://okx.com/join/88312178" class="bottom-image-link" target="_blank">
