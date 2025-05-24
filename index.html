@@ -25,7 +25,17 @@
       box-shadow: 0 0 20px #00ffff;
     }
 
-    .header-box, .neon-box, .coingecko-widget, .ethnews-feed {
+    .header-box {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #ffff00;
+    }
+
+    .header-box h1 {
+      color: #ffff00;
+      text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
+    }
+
+    .neon-box, .coingecko-widget, .ethnews-feed {
       background: rgba(0, 0, 0, 0.6);
       border: 2px solid #00ffff;
     }
@@ -38,7 +48,7 @@
       font-weight: bold;
     }
 
-    .header-box h1, .neon-box h1, .ethnews-feed h2 {
+    .neon-box h1, .ethnews-feed h2 {
       text-shadow: 0 0 10px #00ffff;
     }
 
@@ -95,15 +105,16 @@
       padding: 10px 0;
     }
 
-.teks-bergerak span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: jalan 20s linear infinite;
-  font-size: 16px;
-  color: #00ffea;
-  text-shadow: 0 0 10px #00ffea;
-  white-space: nowrap; /* ini membuat teks tetap 1 baris */
-}
+    .teks-bergerak span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: jalan 20s linear infinite;
+      font-size: 16px;
+      color: #00ffea;
+      text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
+      white-space: nowrap;
+    }
+
     .footer {
       font-size: 14px;
       text-shadow: 0 0 5px #00ffff;
