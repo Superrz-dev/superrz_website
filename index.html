@@ -83,6 +83,20 @@
       text-shadow: 0 0 10px #ffff00;
     }
 
+    .maintenance-box {
+      background: rgba(255, 0, 0, 0.7);
+      padding: 15px 30px;
+      border: 3px solid #ff0000;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000 inset;
+      max-width: 90%;
+      margin: 60px auto 20px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
     .coingecko-widget {
       margin: 30px auto;
       max-width: 95%;
@@ -177,8 +191,11 @@
     <h1>Ob-La-Di, Ob-La-Da</h1>
     <p>Scramouche.</p>
     <p>Focus And Never Give Up!</p>
-    <a href="https://google.com" target="_blank">Klik di sini untuk ke Google</a>
+    <a href="https://okx.com/join/88312178" target="_blank">OKX</a>
   </div>
+
+  <!-- Maintenance Box -->
+  <div class="maintenance-box">Under Maintenance !</div>
 
   <!-- CoinGecko Widget -->
   <div class="coingecko-widget">
@@ -195,17 +212,19 @@
   <div id="okx-dex-widget" class="okx-widget"></div>
   <script src="https://static.okx.com/cdn/widget/okx-widget.js"></script>
   <script>
-    OKXWidget.init({
-      container: '#okx-dex-widget',
-      type: 'dex',
-      theme: 'dark',
-      lang: 'en',
-      width: '100%',
-      height: 520,
-      tokenIn: 'ETH',
-      tokenOut: 'USDT',
-      chainId: 1
-    });
+    window.onload = function () {
+      OKXWidget.init({
+        container: '#okx-dex-widget',
+        type: 'dex',
+        theme: 'dark',
+        lang: 'en',
+        width: '100%',
+        height: 520,
+        tokenIn: 'ETH',
+        tokenOut: 'USDT',
+        chainId: 1
+      });
+    };
   </script>
 
   <!-- Gambar Superrz Klikable -->
