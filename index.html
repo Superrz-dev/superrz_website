@@ -12,7 +12,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 0 240px;
+      padding: 40px 0 250px;
       text-align: center;
     }
 
@@ -176,7 +176,7 @@
 
     .teks-bergerak {
       position: fixed;
-      bottom: 0;
+      bottom: 25px;
       left: 0;
       width: 100%;
       overflow: hidden;
@@ -196,8 +196,8 @@
     }
 
     .footer {
-      position: absolute;
-      bottom: 0;
+      position: relative;
+      margin-top: 40px;
       width: 100%;
       text-align: center;
       font-size: 14px;
@@ -244,7 +244,7 @@
   <!-- ETHNews Feed -->
   <div class="ethnews-feed" id="ethnews-feed">
     <h2>Latest from ETHNews</h2>
-    <ul id="ethnews-list"></ul>
+    <ul id="ethnews-list"><li>Loading news...</li></ul>
   </div>
   <script>
     fetch('https://feedity.net/rss/https--www-ethnews-com/VFJRVFRT.rss')
@@ -253,6 +253,7 @@
       .then(data => {
         const items = data.querySelectorAll("item");
         const list = document.getElementById("ethnews-list");
+        list.innerHTML = "";
         items.forEach(el => {
           const li = document.createElement("li");
           const a = document.createElement("a");
