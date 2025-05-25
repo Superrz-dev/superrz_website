@@ -13,7 +13,7 @@
       color: #00ffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding-bottom: 300px;
+      padding-bottom: 360px;
       text-align: center;
     }
 
@@ -32,7 +32,13 @@
 
     .header-box h1 {
       color: #ffff00;
-      text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
+      text-shadow: 0 0 5px #ffff00;
+      animation: redup 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes redup {
+      0% { opacity: 1; text-shadow: 0 0 10px #ffff00; }
+      100% { opacity: 0.6; text-shadow: 0 0 2px #ffff00; }
     }
 
     .neon-box, .coingecko-widget, .ethnews-feed {
@@ -93,6 +99,27 @@
       width: 50px;
       height: 50px;
       filter: drop-shadow(0 0 5px #00ffff);
+    }
+
+    .support-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px auto;
+      padding: 10px;
+      background: black;
+      border-radius: 50px;
+      width: fit-content;
+    }
+
+    .support-logos img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      padding: 5px;
+      box-shadow: 0 0 8px #00ffff;
     }
 
     .teks-bergerak {
@@ -178,6 +205,15 @@
     };
   </script>
 
+  <div class="support-logos">
+    <img src="https://cryptologos.cc/logos/okx-logo.png" alt="OKX">
+    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance">
+    <img src="https://cryptologos.cc/logos/coingecko-gecko-logo.png" alt="CoinGecko">
+    <img src="https://cryptologos.cc/logos/bitget-logo.png" alt="Bitget">
+    <img src="https://cryptologos.cc/logos/exness-logo.png" alt="Exness">
+    <img src="https://cryptologos.cc/logos/coinmarketcap-logo.png" alt="CoinMarketCap">
+  </div>
+
   <div class="social-icons">
     <a href="https://wa.me/447578354815" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
@@ -197,7 +233,7 @@
   </div>
 
   <div class="teks-bergerak">
-    <span>Maaf Sedang Dalam Tahap Pengembangan.</span>
+    <span>Welcome to Website By Superrz!! Maaf Sedang Dalam Tahap Pengembangan.</span>
   </div>
 
   <div class="footer">
